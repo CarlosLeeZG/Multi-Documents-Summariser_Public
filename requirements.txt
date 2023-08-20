@@ -1,0 +1,5 @@
+openai == 0.27.7
+streamlit == 1.22.0
+langchain == 0.0.256
+unstructured == 0.7.12 
+tiktoken == 0.4.0 
