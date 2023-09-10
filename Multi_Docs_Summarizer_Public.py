@@ -42,9 +42,9 @@ def main():
 
     openai_token = os.environ.get("OPENAI_TOKEN", "")           
     os.environ["OPENAI_API_TYPE"] = "azure"
-    os.environ["OPENAI_API_VERSION"] = openai_version
-    os.environ["OPENAI_API_BASE"] = openai_endpoint
-    os.environ["OPENAI_API_KEY"] = openai_token
+    os.environ["OPENAI_API_VERSION"] = st.secrets.openai_version
+    os.environ["OPENAI_API_BASE"] = st.secrets.openai_endpoint
+    os.environ["OPENAI_API_KEY"] = st.secrets.openai_token
 
     st.header("""
     Notes:
