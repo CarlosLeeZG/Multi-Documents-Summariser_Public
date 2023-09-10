@@ -3,6 +3,6 @@ streamlit == 1.22.0
 pip-system-certs == 4.0
 pandas == 1.5.3
 langchain == 0.0.285
-unstructured[local-inference] == 0.7.12
+unstructured == 0.7.12
 tiktoken == 0.4.0 
 trubrics[streamlit]==1.6.0 
