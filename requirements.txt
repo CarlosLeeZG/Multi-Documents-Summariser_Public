@@ -1,7 +1,7 @@
 openai == 0.27.7
 streamlit == 1.22.0
 langchain == 0.0.256
-unstructured == 0.7.12 
+unstructured[local-inference] == 0.7.12 
 tiktoken == 0.4.0 
 trubrics == 1.4.5 
 trubrics[streamlit] == 1.4.5
