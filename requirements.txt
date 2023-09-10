@@ -3,4 +3,4 @@ streamlit == 1.22.0
 langchain == 0.0.256
 unstructured[local-inference] == 0.7.12 
 tiktoken == 0.4.0 
-trubrics[streamlit]
+trubrics[streamlit] = 1.6.0
