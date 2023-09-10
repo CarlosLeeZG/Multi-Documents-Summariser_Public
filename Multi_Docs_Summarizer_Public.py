@@ -13,7 +13,6 @@ from langchain.callbacks.base import BaseCallbackHandler
 from langchain.docstore.document import Document
 import re
 import io
-import docx
 import pandas as pd
 from trubrics.integrations.streamlit import FeedbackCollector
 
