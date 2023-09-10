@@ -56,7 +56,7 @@ def main():
     agree = st.checkbox("I understand that I am responsible for the use of this tool as a productivity tool and that the app creator is not liable for the credibility of the results genereated.")
 #     """Returns `True` if the user had the correct password."""
     if agree:
-        st.session_state['TOC'] == True
+        st.session_state['TOC'] = True
 
         # Add a title
         st.title("Document Summarizer")
