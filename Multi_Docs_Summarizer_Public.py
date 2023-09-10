@@ -102,9 +102,9 @@ def main():
                         summarize_text_clean = chain({"input_documents": split_documents, "sentence_limit": sentence_limit}, callbacks=[handler])['output_text']
                         current_tries += 1
 
-                st.write(file.name, "(", len(summarize_text_clean.split()), "words )")
+                st.write(pdf.name, "(", len(summarize_text_clean.split()), "words )")
                 st.write(summarize_text_clean)
-                dict_ = {file.name: summarize_text_clean}
+                dict_ = {pdf.name: summarize_text_clean}
                 output = {}
                 output.update(dict_)
     
@@ -112,15 +112,14 @@ def main():
             output = '\n\n'.join(['%s: \n%s' % (key, value) for (key, value) in output.items()])
             st.download_button("Download", data = output, file_name = "download.txt", mime="txt/csv")
 
-        # collector = FeedbackCollector(
-        # project="Multiple Documents Summariser",
-        # email=st.secrets['feedback_user'], 
-        # password=st.secrets['feedback_pass'])
-
-        # collector.st_feedback(
-        # component="Trial 1",
-        # feedback_type="faces", model = 'document summarizer',
-        # open_feedback_label="Provide additional feedback") 
+           collector = FeedbackCollector(
+            component_name="default",
+            email=st.secrets['feedback_user'], 
+            password=st.secrets['feedback_pass'])
+    
+            collector.st_feedback(
+            feedback_type="faces", model = 'document summarizer',
+            open_feedback_label="Provide additional feedback") 
 
 
 if __name__ == "__main__":
