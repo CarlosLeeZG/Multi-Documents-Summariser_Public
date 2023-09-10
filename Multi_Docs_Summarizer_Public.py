@@ -121,7 +121,7 @@ def main():
                 feedback_type="thumbs",
                 model="document summarizer",
                 open_feedback_label="[Optional] Provide additional feedback",
-                prompt_id=None
+                # prompt_id=None
             )
 
 
