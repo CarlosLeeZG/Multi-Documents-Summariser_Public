@@ -76,7 +76,7 @@ def main():
 
                 # Read the contents of the file
                 loader = UnstructuredFileIOLoader(file_like_object)
-                documents = loader.load()
+                document = loader.load()
                 llm = AzureChatOpenAI(temperature=0, 
                     verbose=True, 
                     deployment_name="gpt-4"
