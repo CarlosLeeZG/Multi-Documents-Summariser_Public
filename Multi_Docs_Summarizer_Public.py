@@ -50,13 +50,13 @@ def main():
     Notes:
     - This application is a BETA version
     - Accuracy: Due to ongoing development and the nature of the AI language model, the results may generate inaccurate or misleading information
-    - Accountability: All output m
-    ust be fact-checked, proof-read, and adapted as appropriate by officers for their work
+    - Accountability: All output must be fact-checked, proof-read, and adapted as appropriate by officers for their work
     - Feedback: If you have any suggestion to improve this application, please provide them in the text box below """)
+    
     agree = st.checkbox("I understand that I am responsible for the use of this tool as a productivity tool and that the app creator is not liable for the credibility of the results genereated.")
 #     """Returns `True` if the user had the correct password."""
+    
     if agree:
-        st.session_state['TOC'] = True
 
         # Add a title
         st.title("Document Summarizer")
@@ -65,11 +65,11 @@ def main():
         max_summary_size = st.number_input('Max summary words(Indicative)', value=200, step=10, min_value=50)
 
         # Add a file uploader widget
-        multi_pdf = st.file_uploader("Choose a file", accept_multiple_files=True)
+        multi_pdf = st.file_uploader("Select at least 1 file for upload", accept_multiple_files=True)
 
 
     #     # Check if a file was uploaded
-        if multi_pdf is not None and st.button("Generate"):
+        if multi_pdf is not None and st.button("Generate/Regenerate"):
             for pdf in multi_pdf:
                 file_content = pdf.read()
                 file_like_object = io.BytesIO(file_content)
