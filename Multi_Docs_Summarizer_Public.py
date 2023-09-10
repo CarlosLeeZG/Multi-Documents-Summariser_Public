@@ -95,7 +95,7 @@ def main():
                     summarize_text = chain.run({"input_documents": split_documents, "sentence_limit": sentence_limit}, callbacks=[handler])
                     summarize_text_clean = summarize_text.replace("\n\n", " ")
 
-               current_tries = 1
+                current_tries = 1
                 # Ensure text is less than word limit and not too far off from its limit
                 while len(re.findall(r'\w+', summarize_text_clean)) > max_summary_size and current_tries <= 5:
                     with st.spinner('Please wait ahwile longer while the model optimise the summarised result...'):
