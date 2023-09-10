@@ -112,17 +112,17 @@ def main():
             output = '\n\n'.join(['%s: \n%s' % (key, value) for (key, value) in output.items()])
             st.download_button("Download", data = output, file_name = "download.txt", mime="txt/csv")
 
-            collector = FeedbackCollector(
-                component_name = 'default',
-                email=st.secrets['feedback_user'], 
-                password=st.secrets['feedback_pass'])
+            # collector = FeedbackCollector(
+            #     component_name = 'default',
+            #     email=st.secrets['feedback_user'], 
+            #     password=st.secrets['feedback_pass'])
     
-            collector.st_feedback(
-                feedback_type="thumbs",
-                model="document summarizer",
-                open_feedback_label="[Optional] Provide additional feedback",
-                # prompt_id=None
-            )
+            # collector.st_feedback(
+            #     feedback_type="thumbs",
+            #     model="document summarizer",
+            #     open_feedback_label="[Optional] Provide additional feedback",
+            #     # prompt_id=None
+            # )
 
 
 if __name__ == "__main__":
