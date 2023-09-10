@@ -1,4 +1,4 @@
-openai == 0.27.8
+openai == 0.27.7
 streamlit == 1.22.0
 pip-system-certs == 4.0
 pandas == 1.5.3https://github.com/CarlosLeeZG/Multi-Documents-Summariser_Public/blob/main/requirements.txt
