@@ -113,8 +113,9 @@ def main():
             st.download_button("Download", data = output, file_name = "download.txt", mime="txt/csv")
 
             collector = FeedbackCollector(
-                component_name = 'Multiple Documents Summariser'
-                email=st.secrets['feedback_user'], password=st.secrets['feedback_pass'])
+                component_name = 'Multiple Documents Summariser',
+                email=st.secrets['feedback_user'], 
+                password=st.secrets['feedback_pass'])
     
             collector.st_feedback(
                                   feedback_type="faces", model = 'document summarizer',
