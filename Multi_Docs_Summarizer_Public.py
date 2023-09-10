@@ -114,7 +114,7 @@ def main():
 
             collector = FeedbackCollector(email=st.secrets['feedback_user'], password=st.secrets['feedback_pass'])
     
-            collector.st_feedback(component="Multiple Documents Summariser", 
+            collector.st_feedback(
                                   feedback_type="faces", model = 'document summarizer',
                                   open_feedback_label="Provide additional feedback") 
 
