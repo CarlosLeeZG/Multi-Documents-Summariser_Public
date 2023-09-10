@@ -42,13 +42,11 @@ class ProgressBarHandler(BaseCallbackHandler):
         
 def main():
 
-    openai_token = os.environ.get("OPENAI_TOKEN", "")
-    openai_endpoint = "https://mti-nerve-openai-jp-east.openai.azure.com/"
-           
+    openai_token = os.environ.get("OPENAI_TOKEN", "")           
     os.environ["OPENAI_API_TYPE"] = "azure"
-    os.environ["OPENAI_API_VERSION"] = <Input API Version>
+    os.environ["OPENAI_API_VERSION"] = openai_version
     os.environ["OPENAI_API_BASE"] = openai_endpoint
-    os.environ["OPENAI_API_KEY"] = <Input OpenAI API Key>
+    os.environ["OPENAI_API_KEY"] = openai_token
 
     st.header("""
     Notes:
