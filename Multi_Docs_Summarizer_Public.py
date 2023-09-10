@@ -113,7 +113,7 @@ def main():
             st.download_button("Download", data = output, file_name = "download.txt", mime="txt/csv")
 
         collector = FeedbackCollector(
-        project="Multiple Documents Summariser"
+        project="Multiple Documents Summariser",
         email=st.secrets['feedback_user'], 
         password=st.secrets['feedback_pass'])
 
