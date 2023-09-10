@@ -90,7 +90,7 @@ def main():
 
                 handler = ProgressBarHandler(total_counter=len(split_documents))
                 with st.spinner("Please wait, summarisation in process..."):
-                    summarize_text = chain.run({"input_documents": split_documents, "max_summary_siz": max_summary_siz}, callbacks=[handler])
+                    summarize_text = chain.run({"input_documents": split_documents, "max_summary_size": max_summary_size}, callbacks=[handler])
                     summarize_text_clean = summarize_text.replace("\n\n", " ")
 
                 current_tries = 1
