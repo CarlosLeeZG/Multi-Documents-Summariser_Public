@@ -1,8 +1,9 @@
 openai == 0.27.8
 streamlit == 1.22.0
 pip-system-certs == 4.0
-pandas == 1.5.3
-langchain == 0.0.285
-unstructured[all-docs] == 0.7.12
+pandas == 1.5.3https://github.com/CarlosLeeZG/Multi-Documents-Summariser_Public/blob/main/requirements.txt
+langchain == 0.0.256
+unstructured == 0.7.12 
 tiktoken == 0.4.0 
-trubrics[streamlit]==1.6.0 
+trubrics == 1.4.5 
+trubrics[streamlit] == 1.4.5
