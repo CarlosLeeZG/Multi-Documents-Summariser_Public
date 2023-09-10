@@ -119,8 +119,7 @@ def main():
     
             collector.st_feedback(
                 feedback_type="thumbs",
-                model="document summarizer",
-                open_feedback_label="[Optional] Provide additional feedback"
+                model="document summarizer"
             )
 
 
