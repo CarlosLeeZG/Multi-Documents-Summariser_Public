@@ -1,6 +1,5 @@
 # Imports the OpenAI API and Streamlit libraries.
 import streamlit as st
-import streamlit_survey as ss
 import os
 import json
 import langchain
