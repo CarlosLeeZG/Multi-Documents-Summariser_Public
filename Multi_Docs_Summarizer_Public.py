@@ -118,6 +118,7 @@ def main():
         password=st.secrets['feedback_pass'])
 
         collector.st_feedback(
+        component="Trial 1",
         feedback_type="faces", model = 'document summarizer',
         open_feedback_label="Provide additional feedback") 
 
