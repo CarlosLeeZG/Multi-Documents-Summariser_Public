@@ -118,8 +118,10 @@ def main():
                 password=st.secrets['feedback_pass'])
     
             collector.st_feedback(
-                                  feedback_type="faces", model = 'document summarizer',
-                                  open_feedback_label="Provide additional feedback") 
+                feedback_type="thumbs",
+                model="your_model_name",
+                open_feedback_label="[Optional] Provide additional feedback",
+            )
 
 
 if __name__ == "__main__":
