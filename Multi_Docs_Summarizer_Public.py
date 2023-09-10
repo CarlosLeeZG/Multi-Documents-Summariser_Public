@@ -76,7 +76,7 @@ def main():
 
                 # Read the contents of the file
                 loader = UnstructuredFileIOLoader(file_like_object)
-                split_documents = loader.load()
+                split_documents = loader.load_and_split()
                 llm = AzureChatOpenAI(temperature=0, 
                     verbose=True, 
                     deployment_name="gpt-4"
@@ -85,8 +85,8 @@ def main():
                 template = """Summarise the following document close to {max_summary_size} words, and capturing the main key points of the document.Ignore all footnote and references: file: {text}"""
                 prompt = PromptTemplate(template = template, input_variables = ['text', 'max_summary_size'])
                 chain = load_summarize_chain(llm, chain_type="refine", refine_prompt = prompt)
-                splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=5000, chunk_overlap=20)
-                split_documents = splitter.split_documents(document)
+                # splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=5000, chunk_overlap=20)
+                # split_documents = splitter.split_documents(document)
 
                 handler = ProgressBarHandler(total_counter=len(split_documents))
                 with st.spinner("Please wait, summarisation in process..."):
