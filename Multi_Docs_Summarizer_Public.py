@@ -4,6 +4,7 @@ import os
 import json
 import langchain
 from langchain.document_loaders import UnstructuredFileIOLoader
+from unstructured.partition.pdf import partition_pdf
 from langchain.chains.summarize import load_summarize_chain
 from langchain import PromptTemplate
 from langchain.chat_models import AzureChatOpenAI
