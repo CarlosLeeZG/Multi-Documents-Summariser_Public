@@ -20,7 +20,7 @@ Please refer to the requirements.txt for the libraries and their associated vers
 
 To access the multi-documents summariser app, follow these steps:
 
-1. Click on this link https://multidocsummarizerpublic.streamlit.app/
+1. Click on this link https://multiple-documents-summariser.streamlit.app/
 2. The application will be launched on your default web browser, displaying the user interface
 3. Acknowledge the term of use by checking the tick box as shown
 4. Set the word limit and indicate the number of summaries to be generated for each document
@@ -32,5 +32,6 @@ To access the multi-documents summariser app, follow these steps:
 
 # Results
 
-![image](https://github.com/CarlosLeeZG/DocsSummariser/assets/134188381/cda3f02e-59ae-4563-8cb8-f11306ea4718)
+![image](https://github.com/CarlosLeeZG/Multi-Documents-Summariser_Public/assets/134188381/fc3dd060-8896-4bad-be4a-316a69d1f590)
+
 
