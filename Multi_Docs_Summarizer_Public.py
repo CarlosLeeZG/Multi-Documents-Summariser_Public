@@ -56,7 +56,7 @@ def main():
     agree = st.checkbox("I understand that I am responsible for the use of this tool as a productivity tool and that the app creator is not liable for the credibility of the results genereated.")
 #     """Returns `True` if the user had the correct password."""
     if agree:
-        del st.session_state
+        st.session_state['TOC'] == True
 
         # Add a title
         st.title("Document Summarizer")
@@ -70,7 +70,6 @@ def main():
 
     #     # Check if a file was uploaded
         if multi_pdf is not None and st.button("Generate"):
-            output = {}
             for pdf in multi_pdf:
                 file_content = pdf.read()
                 file_like_object = io.BytesIO(file_content)
@@ -113,15 +112,15 @@ def main():
             output = '\n\n'.join(['%s: \n%s' % (key, value) for (key, value) in output.items()])
             st.download_button("Download", data = output, file_name = "download.txt", mime="txt/csv")
 
-            collector = FeedbackCollector(
-                component_name = 'default',
-                email=st.secrets['feedback_user'], 
-                password=st.secrets['feedback_pass'])
+            # collector = FeedbackCollector(
+            #     component_name = 'default',
+            #     email=st.secrets['feedback_user'], 
+            #     password=st.secrets['feedback_pass'])
     
-            collector.st_feedback(
-                feedback_type="thumbs",
-                model="document summarizer"
-            )
+            # collector.st_feedback(
+            #     feedback_type="thumbs",
+            #     model="document summarizer"
+            # )
 
 
 if __name__ == "__main__":
