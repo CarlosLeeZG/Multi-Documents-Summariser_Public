@@ -1,14 +1,23 @@
+
 openai == 0.27.7
 streamlit == 1.22.0
-<<<<<<< HEAD
+
 langchain == 0.0.256
 unstructured[local-inference] == 0.7.12 
-=======
+
 pip-system-certs == 4.0
 pandas == 1.5.3
 langchain == 0.0.264
 unstructured[all-docs] == 0.7.12
->>>>>>> parent of 38cc0db (Update requirements.txt)
+
 tiktoken == 0.4.0 
 trubrics == 1.4.5 
 trubrics[streamlit] == 1.4.5
+
+openai 
+streamlit
+langchain
+unstructured[local-inference] == 0.7.12 
+tiktoken
+trubrics[streamlit]
+
